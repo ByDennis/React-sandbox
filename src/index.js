@@ -4,19 +4,21 @@ import ReactDOM from "react-dom";
 import "./styles.css";
 import { getPath } from "./tool";
 import CompA from "./state2props";
-
+import { Example, Comment } from "./hooks";
 function App() {
   console.log(
     "=====>>>",
     getPath(
       { level1: { level2: { level3: { level4: 1 } } } },
+      //["level1", "level2", "level3"]
       "level1.level2.level3"
     )
   );
   return (
     <div className="App">
-      <h1>Hello</h1>
-      <CompA />
+      <Example />
+      {/* <CompA /> */}
+      <Comment />
     </div>
   );
 }
